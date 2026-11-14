@@ -165,8 +165,8 @@ public:
                 "Magnetic field radius must be positive.");
         }
 
-        constexpr double mu0 = 1.25663706212e-6;
-        constexpr double pi = 3.14159265358979323846;
+        constexpr double mu0 = 1.25e-6;
+        constexpr double pi = 3.14;
 
         calculatedField =
             current / (2.0 * pi * radius * mu0);
@@ -242,7 +242,7 @@ int main() {
     Magnetic_Field b2(0.1, 0.2, 0.3);
     Magnetic_Field b3(0.4, 0.5, 0.6);
 
-    Magnetic_Field b1;
+    Magnetic_Field b1; 
     b1 = b2 + b3;
 
     std::cout << "Magnetic field sum: " << b1 << '\n'; 
