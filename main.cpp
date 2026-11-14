@@ -1,10 +1,10 @@
 #include <iostream>
 #include <stdexcept>
 
-//=============================================================================
+
 // Base Class: Field
 // Stores the x, y, and z components of a three-dimensional field vector.
-//=============================================================================
+
 class Field {
 protected:
     // Dynamic array containing the field components:
@@ -90,8 +90,8 @@ public:
                 "Electric field radius must be positive.");
         }
 
-        constexpr double epsilon0 = 8.8541878128e-12;
-        constexpr double pi = 3.14159265358979323846;
+        constexpr double epsilon0 = 8.85e-12;
+        constexpr double pi = 3.14;
 
         calculatedField =
             charge / (4.0 * pi * radius * radius * epsilon0);
